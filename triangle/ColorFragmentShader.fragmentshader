@@ -1,0 +1,16 @@
+#version 330 core
+#extension GL_ARB_separate_shader_objects : enable
+
+// Interpolated values from the vertex shaders
+layout(location = 1) in vec3 fragmentColor;
+
+// Ouput data
+out vec3 color;
+
+void main(){
+
+	// Output color = color specified in the vertex shader, 
+	// interpolated between all 3 surrounding vertices
+	color = fragmentColor;
+    //color = vec3(1,0,0);
+}

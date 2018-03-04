@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4301.33/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4301.33/bin/cmake/bin/cmake -E remove -f
+RM = /home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -56,10 +56,56 @@ CMAKE_BINARY_DIR = /home/joela/workspace/graphics/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"libassimp3.0-r1270-OGLtuts\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4301.33/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +116,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4301.33/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -111,44 +157,500 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named graphics
+# Target rules for targets named triangle
 
 # Build rule for target.
-graphics: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 graphics
-.PHONY : graphics
+triangle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 triangle
+.PHONY : triangle
 
 # fast build rule for target.
-graphics/fast:
-	$(MAKE) -f CMakeFiles/graphics.dir/build.make CMakeFiles/graphics.dir/build
-.PHONY : graphics/fast
+triangle/fast:
+	$(MAKE) -f CMakeFiles/triangle.dir/build.make CMakeFiles/triangle.dir/build
+.PHONY : triangle/fast
 
-main.o: main.cpp.o
+#=============================================================================
+# Target rules for targets named ANTTWEAKBAR_116_OGLCORE_GLFW
 
-.PHONY : main.o
+# Build rule for target.
+ANTTWEAKBAR_116_OGLCORE_GLFW: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ANTTWEAKBAR_116_OGLCORE_GLFW
+.PHONY : ANTTWEAKBAR_116_OGLCORE_GLFW
+
+# fast build rule for target.
+ANTTWEAKBAR_116_OGLCORE_GLFW/fast:
+	$(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build
+.PHONY : ANTTWEAKBAR_116_OGLCORE_GLFW/fast
+
+#=============================================================================
+# Target rules for targets named GLEW_1130
+
+# Build rule for target.
+GLEW_1130: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GLEW_1130
+.PHONY : GLEW_1130
+
+# fast build rule for target.
+GLEW_1130/fast:
+	$(MAKE) -f external/CMakeFiles/GLEW_1130.dir/build.make external/CMakeFiles/GLEW_1130.dir/build
+.PHONY : GLEW_1130/fast
+
+#=============================================================================
+# Target rules for targets named uninstall
+
+# Build rule for target.
+uninstall: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uninstall
+.PHONY : uninstall
+
+# fast build rule for target.
+uninstall/fast:
+	$(MAKE) -f external/glfw-3.1.2/CMakeFiles/uninstall.dir/build.make external/glfw-3.1.2/CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
+
+#=============================================================================
+# Target rules for targets named glfw
+
+# Build rule for target.
+glfw: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glfw
+.PHONY : glfw
+
+# fast build rule for target.
+glfw/fast:
+	$(MAKE) -f external/glfw-3.1.2/src/CMakeFiles/glfw.dir/build.make external/glfw-3.1.2/src/CMakeFiles/glfw.dir/build
+.PHONY : glfw/fast
+
+#=============================================================================
+# Target rules for targets named boing
+
+# Build rule for target.
+boing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 boing
+.PHONY : boing
+
+# fast build rule for target.
+boing/fast:
+	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/boing.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/boing.dir/build
+.PHONY : boing/fast
+
+#=============================================================================
+# Target rules for targets named gears
+
+# Build rule for target.
+gears: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gears
+.PHONY : gears
+
+# fast build rule for target.
+gears/fast:
+	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/gears.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/gears.dir/build
+.PHONY : gears/fast
+
+#=============================================================================
+# Target rules for targets named heightmap
+
+# Build rule for target.
+heightmap: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 heightmap
+.PHONY : heightmap
+
+# fast build rule for target.
+heightmap/fast:
+	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/build
+.PHONY : heightmap/fast
+
+#=============================================================================
+# Target rules for targets named particles
+
+# Build rule for target.
+particles: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 particles
+.PHONY : particles
+
+# fast build rule for target.
+particles/fast:
+	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/particles.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/particles.dir/build
+.PHONY : particles/fast
+
+#=============================================================================
+# Target rules for targets named wave
+
+# Build rule for target.
+wave: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wave
+.PHONY : wave
+
+# fast build rule for target.
+wave/fast:
+	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/wave.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/wave.dir/build
+.PHONY : wave/fast
+
+#=============================================================================
+# Target rules for targets named simple
+
+# Build rule for target.
+simple: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple
+.PHONY : simple
+
+# fast build rule for target.
+simple/fast:
+	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/simple.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/simple.dir/build
+.PHONY : simple/fast
+
+#=============================================================================
+# Target rules for targets named splitview
+
+# Build rule for target.
+splitview: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 splitview
+.PHONY : splitview
+
+# fast build rule for target.
+splitview/fast:
+	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/splitview.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/splitview.dir/build
+.PHONY : splitview/fast
+
+#=============================================================================
+# Target rules for targets named windows
+
+# Build rule for target.
+windows: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 windows
+.PHONY : windows
+
+# fast build rule for target.
+windows/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/windows.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/windows.dir/build
+.PHONY : windows/fast
+
+#=============================================================================
+# Target rules for targets named sharing
+
+# Build rule for target.
+sharing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sharing
+.PHONY : sharing
+
+# fast build rule for target.
+sharing/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/sharing.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/sharing.dir/build
+.PHONY : sharing/fast
+
+#=============================================================================
+# Target rules for targets named tearing
+
+# Build rule for target.
+tearing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tearing
+.PHONY : tearing
+
+# fast build rule for target.
+tearing/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/tearing.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/tearing.dir/build
+.PHONY : tearing/fast
+
+#=============================================================================
+# Target rules for targets named events
+
+# Build rule for target.
+events: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 events
+.PHONY : events
+
+# fast build rule for target.
+events/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/events.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/events.dir/build
+.PHONY : events/fast
+
+#=============================================================================
+# Target rules for targets named gamma
+
+# Build rule for target.
+gamma: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gamma
+.PHONY : gamma
+
+# fast build rule for target.
+gamma/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/build
+.PHONY : gamma/fast
+
+#=============================================================================
+# Target rules for targets named title
+
+# Build rule for target.
+title: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 title
+.PHONY : title
+
+# fast build rule for target.
+title/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/title.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/title.dir/build
+.PHONY : title/fast
+
+#=============================================================================
+# Target rules for targets named threads
+
+# Build rule for target.
+threads: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 threads
+.PHONY : threads
+
+# fast build rule for target.
+threads/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/threads.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/threads.dir/build
+.PHONY : threads/fast
+
+#=============================================================================
+# Target rules for targets named empty
+
+# Build rule for target.
+empty: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 empty
+.PHONY : empty
+
+# fast build rule for target.
+empty/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/empty.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/empty.dir/build
+.PHONY : empty/fast
+
+#=============================================================================
+# Target rules for targets named msaa
+
+# Build rule for target.
+msaa: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 msaa
+.PHONY : msaa
+
+# fast build rule for target.
+msaa/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/msaa.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/msaa.dir/build
+.PHONY : msaa/fast
+
+#=============================================================================
+# Target rules for targets named glfwinfo
+
+# Build rule for target.
+glfwinfo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glfwinfo
+.PHONY : glfwinfo
+
+# fast build rule for target.
+glfwinfo/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/build
+.PHONY : glfwinfo/fast
+
+#=============================================================================
+# Target rules for targets named iconify
+
+# Build rule for target.
+iconify: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 iconify
+.PHONY : iconify
+
+# fast build rule for target.
+iconify/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/iconify.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/iconify.dir/build
+.PHONY : iconify/fast
+
+#=============================================================================
+# Target rules for targets named monitors
+
+# Build rule for target.
+monitors: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 monitors
+.PHONY : monitors
+
+# fast build rule for target.
+monitors/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/monitors.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/monitors.dir/build
+.PHONY : monitors/fast
+
+#=============================================================================
+# Target rules for targets named cursor
+
+# Build rule for target.
+cursor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cursor
+.PHONY : cursor
+
+# fast build rule for target.
+cursor/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/cursor.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/cursor.dir/build
+.PHONY : cursor/fast
+
+#=============================================================================
+# Target rules for targets named joysticks
+
+# Build rule for target.
+joysticks: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 joysticks
+.PHONY : joysticks
+
+# fast build rule for target.
+joysticks/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/build
+.PHONY : joysticks/fast
+
+#=============================================================================
+# Target rules for targets named clipboard
+
+# Build rule for target.
+clipboard: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clipboard
+.PHONY : clipboard
+
+# fast build rule for target.
+clipboard/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/build
+.PHONY : clipboard/fast
+
+#=============================================================================
+# Target rules for targets named reopen
+
+# Build rule for target.
+reopen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 reopen
+.PHONY : reopen
+
+# fast build rule for target.
+reopen/fast:
+	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/build
+.PHONY : reopen/fast
+
+#=============================================================================
+# Target rules for targets named zlib
+
+# Build rule for target.
+zlib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 zlib
+.PHONY : zlib
+
+# fast build rule for target.
+zlib/fast:
+	$(MAKE) -f external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/build.make external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/build
+.PHONY : zlib/fast
+
+#=============================================================================
+# Target rules for targets named assimp
+
+# Build rule for target.
+assimp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 assimp
+.PHONY : assimp
+
+# fast build rule for target.
+assimp/fast:
+	$(MAKE) -f external/assimp-3.0.1270/code/CMakeFiles/assimp.dir/build.make external/assimp-3.0.1270/code/CMakeFiles/assimp.dir/build
+.PHONY : assimp/fast
+
+#=============================================================================
+# Target rules for targets named BulletSoftBody
+
+# Build rule for target.
+BulletSoftBody: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BulletSoftBody
+.PHONY : BulletSoftBody
+
+# fast build rule for target.
+BulletSoftBody/fast:
+	$(MAKE) -f external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/build.make external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/build
+.PHONY : BulletSoftBody/fast
+
+#=============================================================================
+# Target rules for targets named BulletCollision
+
+# Build rule for target.
+BulletCollision: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BulletCollision
+.PHONY : BulletCollision
+
+# fast build rule for target.
+BulletCollision/fast:
+	$(MAKE) -f external/bullet-2.81-rev2613/src/BulletCollision/CMakeFiles/BulletCollision.dir/build.make external/bullet-2.81-rev2613/src/BulletCollision/CMakeFiles/BulletCollision.dir/build
+.PHONY : BulletCollision/fast
+
+#=============================================================================
+# Target rules for targets named BulletDynamics
+
+# Build rule for target.
+BulletDynamics: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BulletDynamics
+.PHONY : BulletDynamics
+
+# fast build rule for target.
+BulletDynamics/fast:
+	$(MAKE) -f external/bullet-2.81-rev2613/src/BulletDynamics/CMakeFiles/BulletDynamics.dir/build.make external/bullet-2.81-rev2613/src/BulletDynamics/CMakeFiles/BulletDynamics.dir/build
+.PHONY : BulletDynamics/fast
+
+#=============================================================================
+# Target rules for targets named LinearMath
+
+# Build rule for target.
+LinearMath: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LinearMath
+.PHONY : LinearMath
+
+# fast build rule for target.
+LinearMath/fast:
+	$(MAKE) -f external/bullet-2.81-rev2613/src/LinearMath/CMakeFiles/LinearMath.dir/build.make external/bullet-2.81-rev2613/src/LinearMath/CMakeFiles/LinearMath.dir/build
+.PHONY : LinearMath/fast
+
+common/shader.o: common/shader.cpp.o
+
+.PHONY : common/shader.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics.dir/build.make CMakeFiles/graphics.dir/main.cpp.o
-.PHONY : main.cpp.o
+common/shader.cpp.o:
+	$(MAKE) -f CMakeFiles/triangle.dir/build.make CMakeFiles/triangle.dir/common/shader.cpp.o
+.PHONY : common/shader.cpp.o
 
-main.i: main.cpp.i
+common/shader.i: common/shader.cpp.i
 
-.PHONY : main.i
+.PHONY : common/shader.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics.dir/build.make CMakeFiles/graphics.dir/main.cpp.i
-.PHONY : main.cpp.i
+common/shader.cpp.i:
+	$(MAKE) -f CMakeFiles/triangle.dir/build.make CMakeFiles/triangle.dir/common/shader.cpp.i
+.PHONY : common/shader.cpp.i
 
-main.s: main.cpp.s
+common/shader.s: common/shader.cpp.s
 
-.PHONY : main.s
+.PHONY : common/shader.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics.dir/build.make CMakeFiles/graphics.dir/main.cpp.s
-.PHONY : main.cpp.s
+common/shader.cpp.s:
+	$(MAKE) -f CMakeFiles/triangle.dir/build.make CMakeFiles/triangle.dir/common/shader.cpp.s
+.PHONY : common/shader.cpp.s
+
+triangle/main.o: triangle/main.cpp.o
+
+.PHONY : triangle/main.o
+
+# target to build an object file
+triangle/main.cpp.o:
+	$(MAKE) -f CMakeFiles/triangle.dir/build.make CMakeFiles/triangle.dir/triangle/main.cpp.o
+.PHONY : triangle/main.cpp.o
+
+triangle/main.i: triangle/main.cpp.i
+
+.PHONY : triangle/main.i
+
+# target to preprocess a source file
+triangle/main.cpp.i:
+	$(MAKE) -f CMakeFiles/triangle.dir/build.make CMakeFiles/triangle.dir/triangle/main.cpp.i
+.PHONY : triangle/main.cpp.i
+
+triangle/main.s: triangle/main.cpp.s
+
+.PHONY : triangle/main.s
+
+# target to generate assembly for a file
+triangle/main.cpp.s:
+	$(MAKE) -f CMakeFiles/triangle.dir/build.make CMakeFiles/triangle.dir/triangle/main.cpp.s
+.PHONY : triangle/main.cpp.s
 
 # Help Target
 help:
@@ -156,12 +658,52 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... graphics"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... triangle"
+	@echo "... ANTTWEAKBAR_116_OGLCORE_GLFW"
+	@echo "... GLEW_1130"
+	@echo "... uninstall"
+	@echo "... glfw"
+	@echo "... boing"
+	@echo "... gears"
+	@echo "... heightmap"
+	@echo "... particles"
+	@echo "... wave"
+	@echo "... simple"
+	@echo "... splitview"
+	@echo "... windows"
+	@echo "... sharing"
+	@echo "... tearing"
+	@echo "... events"
+	@echo "... gamma"
+	@echo "... title"
+	@echo "... threads"
+	@echo "... empty"
+	@echo "... msaa"
+	@echo "... glfwinfo"
+	@echo "... iconify"
+	@echo "... monitors"
+	@echo "... cursor"
+	@echo "... joysticks"
+	@echo "... clipboard"
+	@echo "... reopen"
+	@echo "... zlib"
+	@echo "... assimp"
+	@echo "... BulletSoftBody"
+	@echo "... BulletCollision"
+	@echo "... BulletDynamics"
+	@echo "... LinearMath"
+	@echo "... common/shader.o"
+	@echo "... common/shader.i"
+	@echo "... common/shader.s"
+	@echo "... triangle/main.o"
+	@echo "... triangle/main.i"
+	@echo "... triangle/main.s"
 .PHONY : help
 
 

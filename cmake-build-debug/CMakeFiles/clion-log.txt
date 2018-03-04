@@ -1,5 +1,7 @@
-/home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4301.33/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/joela/workspace/graphics
-OpenGL Correctly Found
+/home/joela/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/joela/workspace/graphics
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Using X11 for window creation
+-- Using GLX for context creation
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/joela/workspace/graphics/cmake-build-debug
