@@ -1,2 +1,4 @@
 #ignore all olg-master files
 /ogl-master
+#ignore .idea
+.idea
