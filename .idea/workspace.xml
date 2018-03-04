@@ -80,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/ogl-master/external/AntTweakBar-1.16/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="680">
-              <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+              <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -351,12 +351,12 @@
       <workItem from="1517028818214" duration="60000" />
       <workItem from="1517032323275" duration="1789000" />
       <workItem from="1520060412327" duration="2116000" />
-      <workItem from="1520118274043" duration="12992000" />
+      <workItem from="1520118274043" duration="13197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17553000" />
+    <option name="totallyTimeSpent" value="17758000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="3848" height="2120" extended-state="6" />
@@ -589,7 +589,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -597,7 +597,7 @@
     <entry file="file://$PROJECT_DIR$/ogl-master/external/AntTweakBar-1.16/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
-          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
           <folding />
         </state>
       </provider>
